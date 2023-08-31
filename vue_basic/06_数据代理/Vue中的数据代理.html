@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>初识vue</title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+   <style>
+   </style>
+</head>
+<body>
+        <!--准备容器-->
+        <div id="root">
+            <h1>Hello,{{name.toUpperCase()}},{{address}}</h1>
+        </div>
+       <script type="text/javascript">
+           Vue.config.productionTip = false;
+           //创建vue实例
+        const vm = new Vue({
+               el:'#root',
+               data:{
+                   name:'linkingcoder',
+                   address:'北京海淀'
+               }
+           })
+
+       </script>
+</body>
+</html>

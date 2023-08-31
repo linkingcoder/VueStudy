@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript" src="../js/vue.js"></script>
+    <style>
+    </style>
+</head>
+<body>
+        <div id="root">
+            <h2>欢迎{{name}}</h2>
+            <button @click="showInfo1">点我提示信息1</button>
+            <button @click="showInfo2($event,66)">点我提示信息2</button>
+        </div>
+
+</body>
+<script type="text/javascript">
+    Vue.config.productionTip = false;
+
+    new Vue({
+        el:'#root',
+        data:{
+            name:'linkngcoder'
+        },
+        methods:{
+            showInfo1(){
+                alert('同学你好')
+            },
+            showInfo2(event,number){
+                alert('同学你好2')
+                console.log(event,number)
+            }
+        }
+    })
+</script>
+</html>
